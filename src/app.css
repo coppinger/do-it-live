@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Satoshi";
+    src: url("/Satoshi-Variable.ttf");
+}
+
+@font-face {
+    font-family: "Glamour";
+    src: url("/GlamourAbsolute_Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 .background-gradient {
     background: radial-gradient(
             68.18% 68.18% at 50% 0%,
@@ -26,4 +38,28 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.primary-button {
+    border-radius: 12px;
+    border: 1px solid #15803d;
+    background: linear-gradient(
+            180deg,
+            rgba(21, 128, 61, 0.2) 0%,
+            rgba(134, 239, 172, 0.2) 100%
+        ),
+        #86efac;
+    @apply px-8 py-4 block w-fit font-bold text-green-700 hover:scale-110 transition-all ease-linear duration-150 delay-75 shadow-button hover:shadow-hover;
+}
+
+.heading {
+    @apply text-5xl text-slate-100 font-glamour;
+}
+
+.sub-heading {
+    @apply text-2xl font-medium text-slate-400;
+}
+
+.green-glow {
+    text-shadow: 0px 0px 56.8px 0px rgba(57, 206, 119, 0.8);
 }
