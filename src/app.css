@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.background-gradient {
+    background: radial-gradient(
+            68.18% 68.18% at 50% 0%,
+            rgba(59, 131, 246, 0.2) 0%,
+            rgba(0, 0, 0, 0.2) 100%
+        ),
+        #020617;
+}
+
+.twitch-glow {
+    opacity: 0.24;
+    background: radial-gradient(
+        283.59% 117.59% at 36.1% -52.05%,
+        #9146ff 0%,
+        #9146ff 100%
+    );
+    filter: blur(125px);
+}
+
+.inset-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
