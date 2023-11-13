@@ -3114,26 +3114,51 @@
             </div>
         </div>
     </section>
-    <section class="px-6">
+    <section class="px-6 flex flex-col gap-16 items-center">
         <div class="flex flex-col text-center gap-8">
             <p class="heading">What do I mean by community?</p>
             <p class="sub-heading max-w-md self-center">
                 I asked my chat, and here are some of the responses
             </p>
         </div>
-        <div class="flex shrink-0 w-fit gap-8">
-            <ChatReference username="badcop" followAge="2 years"
-                >You are the worst streamer I have ever come across, fr man</ChatReference
-            ><ChatReference username="badcop" followAge="2 years"
-                >You are the worst streamer I have ever come across, fr man</ChatReference
-            ><ChatReference username="badcop" followAge="2 years"
-                >You are the worst streamer I have ever come across, fr man</ChatReference
-            ><ChatReference username="badcop" followAge="2 years"
-                >You are the worst streamer I have ever come across, fr man</ChatReference
+        <div
+            class="flex overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] gap-16"
+        >
+            <ul
+                class="flex shrink-0 items-center justify-center md:justify-start animate-infinite-scroll gap-16"
             >
-            <ChatReference username="badcop" followAge="2 years"
-                >You are the worst streamer I have ever come across, fr man</ChatReference
+                <ChatReference username="badcop" followAge="2 years"
+                    >You are the worst streamer I have ever come across, fr man</ChatReference
+                ><ChatReference username="badcop" followAge="2 years"
+                    >You are the worst streamer I have ever come across, fr man</ChatReference
+                ><ChatReference username="badcop" followAge="2 years"
+                    >You are the worst streamer I have ever come across, fr man</ChatReference
+                >
+            </ul>
+            <ul
+                class="flex items-center justify-center md:justify-start animate-infinite-scroll gap-16"
+                aria-hidden="true"
             >
+                <ChatReference username="badcop" followAge="2 years"
+                    >You are the worst streamer I have ever come across, fr man</ChatReference
+                ><ChatReference username="badcop" followAge="2 years"
+                    >You are the worst streamer I have ever come across, fr man</ChatReference
+                ><ChatReference username="badcop" followAge="2 years"
+                    >You are the worst streamer I have ever come across, fr man</ChatReference
+                >
+            </ul>
+            <ul
+                class="flex items-center justify-center md:justify-start animate-infinite-scroll gap-16"
+                aria-hidden="true"
+            >
+                <ChatReference username="badcop" followAge="2 years"
+                    >You are the worst streamer I have ever come across, fr man</ChatReference
+                ><ChatReference username="badcop" followAge="2 years"
+                    >You are the worst streamer I have ever come across, fr man</ChatReference
+                ><ChatReference username="badcop" followAge="2 years"
+                    >You are the worst streamer I have ever come across, fr man</ChatReference
+                >
+            </ul>
         </div>
     </section>
     <!-- Final C2A -->
