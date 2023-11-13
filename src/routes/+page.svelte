@@ -3,6 +3,13 @@
     import Header from "../lib/components/Header.svelte";
     import StreamerBadge from "../lib/components/StreamerBadge.svelte";
 
+    // Libraries
+
+    import "atropos/css";
+
+    // import Atropos library
+    import Atropos from "atropos";
+
     // SVGs
     import Tick from "../lib/svgs/Tick.svelte";
     import Twitter from "../lib/svgs/Twitter.svelte";
@@ -13,6 +20,8 @@
     import Confetti from "../lib/svgs/Confetti.svelte";
     import DiscountedPrice from "../lib/svgs/DiscountedPrice.svelte";
     import TimelineSeperator from "../lib/svgs/TimelineSeperator.svelte";
+
+    // Discount checker
 
     let discountCheck;
 
@@ -28,6 +37,29 @@
                 window.location.search.includes("smallbets") ||
                 window.location.search.includes("testing"))
     );
+
+    onMount(() => {
+        const astroposChat = Atropos({
+            el: ".atropos-chat",
+            eventsEl: ".atropos-parent-el",
+            shadow: false,
+        });
+        const atroposActivity = Atropos({
+            el: ".atropos-activity",
+            eventsEl: ".atropos-parent-el",
+            shadow: false,
+        });
+        const atorposStream = Atropos({
+            el: ".atropos-stream",
+            eventsEl: ".atropos-parent-el",
+            shadow: false,
+        });
+        const atroposTitle = Atropos({
+            el: ".atropos-title",
+            eventsEl: ".atropos-parent-el",
+            shadow: false,
+        });
+    });
 </script>
 
 <div class="flex flex-col gap-12">
@@ -69,22 +101,79 @@
         </ul>
     </div>
     <!-- Stream Section -->
+
     <section>
-        <!-- Chat -->
-        <div class="p-8 border-2 border-dashed border-[#2D4C7E] rounded-lg">
-            <p>Chat</p>
-        </div>
-        <!-- Stream -->
-        <div class="p-8 border-2 border-dashed border-[#2D4C7E] rounded-lg">
-            <p>Stream</p>
-        </div>
-        <!-- Title -->
-        <div class="p-8 border-2 border-dashed border-[#2D4C7E] rounded-lg">
-            <p>Title</p>
-        </div>
-        <!-- Activity Stream -->
-        <div class="p-8 border-2 border-dashed border-[#2D4C7E] rounded-lg">
-            <p>Activity Stream</p>
+        <div class="atropos-parent-el flex gap-8">
+            <div class="atropos atropos-chat max-w-xs shrink-0 w-full">
+                <!-- scale container (required) -->
+                <div class="atropos-scale">
+                    <!-- rotate container (required) -->
+                    <div class="atropos-rotate">
+                        <!-- inner container (required) -->
+                        <div class="atropos-inner">
+                            <!-- put your custom content here -->
+                            <div
+                                class="p-8 border-2 border-dashed border-[#2D4C7E] rounded-lg h-full"
+                            >
+                                <p>Chat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8">
+                <div class="atropos atropos-stream">
+                    <!-- scale container (required) -->
+                    <div class="atropos-scale">
+                        <!-- rotate container (required) -->
+                        <div class="atropos-rotate">
+                            <!-- inner container (required) -->
+                            <div class="atropos-inner">
+                                <!-- put your custom content here -->
+                                <div
+                                    class="p-8 border-2 border-dashed border-[#2D4C7E] rounded-lg"
+                                >
+                                    <img src="/images/hacker.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="atropos atropos-title">
+                    <!-- scale container (required) -->
+                    <div class="atropos-scale">
+                        <!-- rotate container (required) -->
+                        <div class="atropos-rotate">
+                            <!-- inner container (required) -->
+                            <div class="atropos-inner">
+                                <!-- put your custom content here -->
+                                <div
+                                    class="p-8 border-2 border-dashed border-[#2D4C7E] rounded-lg"
+                                >
+                                    <p>Title</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="atropos atropos-activity max-w-xs shrink-0 w-full">
+                <!-- scale container (required) -->
+                <div class="atropos-scale">
+                    <!-- rotate container (required) -->
+                    <div class="atropos-rotate">
+                        <!-- inner container (required) -->
+                        <div class="atropos-inner">
+                            <!-- put your custom content here -->
+                            <div
+                                class="p-8 border-2 border-dashed border-[#2D4C7E] rounded-lg h-full"
+                            >
+                                <p>Activity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Timeline Section -->

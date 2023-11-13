@@ -20,6 +20,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"atropos": "^2.0.2",
 		"gsap": "^3.12.2"
 	}
 }
