@@ -6,6 +6,7 @@
 	// Libraries
 
 	import 'atropos/css';
+	import Typewriter from 'svelte-typewriter';
 
 	// import Atropos library
 	import Atropos from 'atropos';
@@ -97,7 +98,7 @@
 
 	<section class="relative flex justify-center items-center">
 		<svg
-			class="absolute -top-56"
+			class="absolute -top-56 pointer-events-none"
 			width="1400"
 			height="900"
 			viewBox="0 0 1242 892"
@@ -145,7 +146,7 @@
 						<div class="atropos-inner">
 							<!-- put your custom content here -->
 							<div class="p-8 border-2 border-dashed border-[#2D4C7E] rounded-lg h-full">
-								<p>Chat</p>
+								<p class="text-xl font-bold">Chat</p>
 							</div>
 						</div>
 					</div>
@@ -182,7 +183,12 @@
 								<!-- put your custom content here -->
 								<div class="p-4 border-2 border-dashed border-[#2D4C7E] rounded-lg">
 									<div class="flex flex-col gap-2">
-										<p class="text-xl font-bold">Hooking up Supabase to the MVP</p>
+										<Typewriter mode="loop">
+											<p class="text-xl font-bold">Hooking up Supabase to the MVP</p>
+											<p class="text-xl font-bold">Fixing the Deathstar</p>
+											<p class="text-xl font-bold">Launching my 100th SaaS</p>
+											<p class="text-xl font-bold">Retiring to Greece with a yacht</p>
+										</Typewriter>
 										<p class="text-lg font-medium text-slate-400">Software and Game Development</p>
 									</div>
 									<div class="flex"></div>
@@ -201,7 +207,7 @@
 						<div class="atropos-inner">
 							<!-- put your custom content here -->
 							<div class="p-8 border-2 border-dashed border-[#2D4C7E] rounded-lg h-full">
-								<p>Activity</p>
+								<p class="text-xl font-bold">Activity</p>
 							</div>
 						</div>
 					</div>
@@ -215,13 +221,15 @@
 			<StreamerBadge />
 			<p class="heading">Hey, my name is Charlie</p>
 		</div>
-		<p class="sub-heading">
+		<p class="sub-heading max-w-md self-center">
 			Over 5 years ago, on a bit of a whim, I began streaming myself working on projects, live on
 			Twitch.
 		</p>
-		<p class="sub-heading">Doing so changed my life, and I think it could change yours, too.</p>
+		<p class="sub-heading max-w-md self-center">
+			Doing so changed my life, and I think it could change yours, too.
+		</p>
 		<TimelineSeperator class="self-center" />
-		<div class="sub-heading">
+		<div class="sub-heading max-w-md self-center">
 			Before I started streaming, I was struggling to work on my projects
 		</div>
 		<div
