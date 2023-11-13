@@ -4,7 +4,10 @@ export default {
     theme: {
         extend: {
             colors: {
-                'transparent-blue':'rgba(50, 60, 81, 0.16)',
+                "transparent-blue": "rgba(50, 60, 81, 0.16)",
+            },
+            backgroundImage: {
+                lines: "url('/images/line-bg.png')",
             },
             fontFamily: {
                 satoshi: ["Satoshi", "sans-serif"],

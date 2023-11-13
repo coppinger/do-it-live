@@ -23,7 +23,7 @@
             animation: tl,
             trigger: ".streamer-container",
             start: "top 50%",
-            end: "bottom 50%",
+            end: "bottom 10%",
             animation: tl,
             scrub: true,
         });
