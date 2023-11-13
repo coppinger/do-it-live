@@ -66,7 +66,7 @@
 	});
 </script>
 
-<div class="flex flex-col gap-12">
+<div class="flex flex-col gap-12 md:gap-20">
 	<Header />
 	<!-- Hero Section -->
 	<div class="flex flex-col gap-8 md:gap-16 justify-center items-center relative">
@@ -258,15 +258,17 @@
 		<!-- 2018 Photo -->
 		<div class="flex flex-col items-center gap-4">
 			<div class="heading">2018</div>
-			<div class="sub-heading">
+			<div class="sub-heading max-w-md">
 				I kicked off my first stream, with a green scarf tied to a washing line as the green screen
 			</div>
-			<div class="mt-4 overflow-hidden rounded-3xl">
+			<div class="mt-4 overflow-hidden rounded-3xl max-w-md">
 				<img src="/images/green-screen.jpg" alt="" />
 			</div>
 		</div>
 		<TimelineSeperator class="self-center" />
-		<div class="sub-heading">It wasn't long before my indie hacking journey radically changed</div>
+		<div class="sub-heading max-w-md self-center">
+			It wasn't long before my indie hacking journey radically changed
+		</div>
 		<div
 			class="flex flex-col md:flex-row justify-center bg-transparent md:bg-transparent-blue md:w-fit items-center gap-4 p-4 rounded-2xl self-center"
 		>
@@ -292,11 +294,11 @@
 		<!-- 2023 Photo -->
 		<div class="flex flex-col items-center gap-4">
 			<div class="heading">2023</div>
-			<div class="sub-heading">
+			<div class="sub-heading max-w-md self-center">
 				Today, I’m very lucky to be able to ship things alongside an active and highly supportive
 				community
 			</div>
-			<div class="mt-4 overflow-hidden rounded-3xl">
+			<div class="mt-4 overflow-hidden rounded-3xl max-w-md">
 				<img src="/images/green-screen.jpg" alt="" />
 			</div>
 		</div>
@@ -304,7 +306,7 @@
 	<!-- Pricing Section -->
 	<div class="flex flex-col justify-center gap-8 px-6 py-12 text-center">
 		<p class="heading">Start your streaming journey</p>
-		<p class="sub-heading">
+		<p class="sub-heading max-w-md self-center">
 			I’ll teach you everything you need to know in order to kick of your stream with a bang
 		</p>
 		{#if discountCheck}
@@ -317,28 +319,30 @@
 			</div>
 		{/if}
 		<div class="flex flex-col gap-8 items-center justify-center">
-			<p class="font-glamour text-slate-300 text-7xl opacity-50">$200</p>
-			<div class="flex justify-center items-center relative">
-				<p class="text-green-300 font-glamour green-glow text-6xl">$</p>
-				<p class="text-green-300 font-glamour green-glow text-9xl">100</p>
-				<svg
-					class="absolute ml-8"
-					width="143"
-					height="51"
-					viewBox="0 0 143 51"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M8.80643 43.7738C7.10991 44.8112 2.81353 46.6004 2.02819 48.7498C1.35553 50.5907 12.9444 46.9591 12.9792 46.9475C41.0986 37.5365 68.4781 25.9145 96.4536 16.0731C109.167 11.6008 122.052 7.61281 134.89 3.51571C135.909 3.19034 138.966 1.78079 140.218 2.43823C142.311 3.53659 136.417 8.81396 136.104 9.21648"
-						stroke="#EA4445"
-						stroke-width="3"
-						stroke-linecap="round"
-					/>
-				</svg>
+			<div class="flex flex-col md:flex-row md:gap-8 justify-center items-center">
+				<p class="font-glamour text-slate-300 text-7xl opacity-50">$200</p>
+				<div class="flex justify-center items-center relative">
+					<p class="text-green-300 font-glamour green-glow text-6xl">$</p>
+					<p class="text-green-300 font-glamour green-glow text-9xl">100</p>
+					<svg
+						class="absolute ml-8"
+						width="143"
+						height="51"
+						viewBox="0 0 143 51"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M8.80643 43.7738C7.10991 44.8112 2.81353 46.6004 2.02819 48.7498C1.35553 50.5907 12.9444 46.9591 12.9792 46.9475C41.0986 37.5365 68.4781 25.9145 96.4536 16.0731C109.167 11.6008 122.052 7.61281 134.89 3.51571C135.909 3.19034 138.966 1.78079 140.218 2.43823C142.311 3.53659 136.417 8.81396 136.104 9.21648"
+							stroke="#EA4445"
+							stroke-width="3"
+							stroke-linecap="round"
+						/>
+					</svg>
+				</div>
+				<DiscountedPrice />
 			</div>
-			<DiscountedPrice />
-			<p class="sub-heading">50% launch discount</p>
+			<p class="sub-heading max-w-md self-center">50% launch discount</p>
 			<p class="sub-heading flex gap-2 items-center">
 				+20% extra off <span><Heart /></span>
 			</p>
@@ -346,9 +350,9 @@
 		</div>
 	</div>
 	<!-- Course Details Section -->
-	<section class="flex flex-col gap-8 px-6">
+	<section class="flex flex-col gap-8 px-6 md:flex md:flex-row self-center md:gap-8">
 		<!-- 1 -->
-		<div class="flex flex-col gap-8">
+		<div class="flex flex-col gap-8 lg:p-12 bg-transparent-bue">
 			<div class="flex flex-col gap-4">
 				<div class="flex justify-center items-center bg-slate-700 h-12 w-12 rounded-xl">😴</div>
 
@@ -370,7 +374,7 @@
 			</ul>
 		</div>
 		<!-- 2 -->
-		<div class="flex flex-col gap-8">
+		<div class="flex flex-col gap-8 lg:p-12 bg-transparent-bue">
 			<div class="flex flex-col gap-4">
 				<div class="flex justify-center items-center bg-slate-700 h-12 w-12 rounded-xl">😴</div>
 				<p class="heading">Resources</p>
@@ -391,7 +395,7 @@
 			</ul>
 		</div>
 		<!-- 3 -->
-		<div class="flex flex-col gap-8">
+		<div class="flex flex-col gap-8 lg:p-12 bg-transparent-bue">
 			<div class="flex flex-col gap-4">
 				<div class="flex justify-center items-center bg-slate-700 h-12 w-12 rounded-xl">😴</div>
 				<p class="heading">Community</p>
@@ -917,7 +921,7 @@
 			</svg>
 			<p class="heading">Lessons</p>
 		</div>
-		<div class="sub-heading">What you’ll learn by the end of the course</div>
+		<div class="sub-heading max-w-md self-center">What you’ll learn by the end of the course</div>
 		<ul class="flex flex-col gap-6">
 			<li class="flex flex-col bg-transparent-blue p-6 rounded-2xl gap-4">
 				<p class="text-xl font-medium text-slate-400">What to use & how to set it up</p>
@@ -953,7 +957,7 @@
 	<section class="px-6 flex flex-col gap-16">
 		<div class="flex flex-col text-center gap-8">
 			<p class="heading">What’s the word on the street?</p>
-			<p class="sub-heading">
+			<p class="sub-heading max-w-md self-center">
 				Here’s what a few Software & Game Dev streamers on Twitch have to say
 			</p>
 		</div>
@@ -1008,7 +1012,7 @@
 	<section class="px-6">
 		<div class="flex flex-col text-center gap-8">
 			<p class="heading">What’s the word on the street?</p>
-			<p class="sub-heading">
+			<p class="sub-heading max-w-md self-center">
 				Here’s what a few Software & Game Dev streamers on Twitch have to say
 			</p>
 		</div>
