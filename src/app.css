@@ -63,3 +63,15 @@
 .green-glow {
     text-shadow: 0px 0px 56.8px 0px rgba(57, 206, 119, 0.8);
 }
+
+.atropos-highlight {
+    background-image: radial-gradient(
+        circle at 50%,
+        rgba(175, 0, 255, 0.2),
+        transparent 50%
+    ) !important;
+}
+
+.typing::after {
+    background-color: white !important;
+}
