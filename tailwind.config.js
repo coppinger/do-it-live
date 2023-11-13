@@ -3,6 +3,9 @@ export default {
     content: ["./src/**/*.{html,js,svelte,ts}"],
     theme: {
         extend: {
+            colors: {
+                'transparent-blue':'rgba(50, 60, 81, 0.16)',
+            },
             fontFamily: {
                 satoshi: ["Satoshi", "sans-serif"],
                 glamour: ["Glamour", "serif"],
