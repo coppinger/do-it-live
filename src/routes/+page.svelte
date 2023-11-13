@@ -226,7 +226,7 @@
         </svg>
 
         <div class="atropos-parent-el flex gap-8 max-w-screen-xl mx-auto my-16">
-            <div class="atropos atropos-chat max-w-xs shrink-0 w-full">
+            <div class="max-w-xs shrink-0 w-full">
                 <!-- scale container (required) -->
                 <div class="atropos-scale">
                     <!-- rotate container (required) -->
@@ -253,7 +253,7 @@
                 </div>
             </div>
             <div class="flex flex-col gap-8">
-                <div class="atropos atropos-stream" data-atropos-offset="0">
+                <div class="atropos atropos-stream" data-atropos-offset="10">
                     <!-- scale container (required) -->
                     <div class="atropos-scale">
                         <!-- rotate container (required) -->
@@ -286,7 +286,10 @@
                                 <div
                                     class="flex justify-between items-center p-4 border-2 border-dashed border-[#2D4C7E] rounded-lg"
                                 >
-                                    <div class="flex flex-col gap-2">
+                                    <div
+                                        class="flex flex-col gap-2"
+                                        data-atropos-offset="10"
+                                    >
                                         <div class="flex">
                                             <p class="text-xl font-bold">​</p>
                                             <Typewriter mode="loop">
@@ -312,7 +315,7 @@
                                             Software and Game Development
                                         </p>
                                     </div>
-                                    <div class="flex">
+                                    <div class="flex" data-atropos-offset="10">
                                         <ViewCount />
                                         <Typewriter
                                             mode="loopOnce"
@@ -346,7 +349,7 @@
                     </div>
                 </div>
             </div>
-            <div class="atropos atropos-activity max-w-xs shrink-0 w-full">
+            <div class="max-w-xs shrink-0 w-full">
                 <!-- scale container (required) -->
                 <div class="atropos-scale">
                     <!-- rotate container (required) -->
