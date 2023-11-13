@@ -1,17 +1,49 @@
-<div class="flex flex-col justify-center items-center">
+<script>
+    import gsap from "gsap";
+    import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+    import { onMount } from "svelte";
+
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline();
+
+    onMount(() => {
+        tl.to(".streamer", {
+            opacity: 1,
+            transform: "rotate(0deg)",
+        })
+            .to(".camera", {
+                transform: "rotate(-35deg)",
+                opacity: 1,
+            })
+            .to(".light", {
+                transform: "rotate(45deg)",
+                opacity: 1,
+            });
+        ScrollTrigger.create({
+            animation: tl,
+            trigger: ".streamer-container",
+            start: "top 50%",
+            end: "bottom 50%",
+            animation: tl,
+            scrub: true,
+        });
+    });
+</script>
+
+<div class="streamer-container flex flex-col justify-center items-center">
     <div class="relative">
         <img
-            class="absolute top-0 z-0 -right-20 rotate-45 h-[244px]"
+            class="light opacity-0 absolute origin-bottom-left -top-20 z-0 -right-10 rotate-90 h-[244px]"
             src="/images/elgato-light.png"
             alt=""
         />
         <img
-            class="absolute top-10 z-10 -rotate-[35deg] -left-5 h-[167px]"
+            class="camera absolute opacity-0 top-6 z-0 left-0 origin-bottom-right -rotate-[90deg] h-[167px]"
             src="/images/camera.png"
             alt=""
         />
         <img
-            class="relative z-20 h-[200px]"
+            class="streamer relative opacity-0 z-0 h-[200px] origin-bottom-left transform rotate-90"
             src="/images/streamer.png"
             alt=""
         />
