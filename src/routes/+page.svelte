@@ -2271,7 +2271,19 @@
                 class="flex flex-col bg-transparent-blue p-6 rounded-2xl gap-4 md:p-12"
             >
                 <p class="text-xl font-medium text-slate-400">
-                    What to use & how to set it up
+                    Dive into the world of live streaming with ease
+                </p>
+                <p class="text-3xl font-bold">Streaming 101</p>
+                <p class="text-xl font-medium text-slate-400">
+                    There is a range of software available to stream from, and
+                    most <have />
+                </p>
+            </li>
+            <li
+                class="flex flex-col bg-transparent-blue p-6 rounded-2xl gap-4 md:p-12"
+            >
+                <p class="text-xl font-medium text-slate-400">
+                    What software to use and how to set it up
                 </p>
                 <p class="text-3xl font-bold">Software</p>
                 <p class="text-xl font-medium text-slate-400">
@@ -2283,9 +2295,9 @@
                 class="flex flex-col bg-transparent-blue p-6 rounded-2xl gap-4 md:p-12"
             >
                 <p class="text-xl font-medium text-slate-400">
-                    What to use & how to set it up
+                    The best gear for different budgets
                 </p>
-                <p class="text-3xl font-bold">Software</p>
+                <p class="text-3xl font-bold">Equipment</p>
                 <p class="text-xl font-medium text-slate-400">
                     There is a range of software available to stream from, and
                     most <have />
@@ -2295,21 +2307,9 @@
                 class="flex flex-col bg-transparent-blue p-6 rounded-2xl gap-4 md:p-12"
             >
                 <p class="text-xl font-medium text-slate-400">
-                    What to use & how to set it up
+                    Grow your project and your audience simultaneously
                 </p>
-                <p class="text-3xl font-bold">Software</p>
-                <p class="text-xl font-medium text-slate-400">
-                    There is a range of software available to stream from, and
-                    most <have />
-                </p>
-            </li>
-            <li
-                class="flex flex-col bg-transparent-blue p-6 rounded-2xl gap-4 md:p-12"
-            >
-                <p class="text-xl font-medium text-slate-400">
-                    What to use & how to set it up
-                </p>
-                <p class="text-3xl font-bold">Software</p>
+                <p class="text-3xl font-bold">Growth</p>
                 <p class="text-xl font-medium text-slate-400">
                     There is a range of software available to stream from, and
                     most <have />
