@@ -3,7 +3,9 @@
     export let followAge;
 </script>
 
-<li class="flex flex-col gap-4 shrink-0 bg-transparent-blue p-8">
+<li
+    class="flex flex-col gap-4 shrink-0 bg-transparent-blue rounded-2xl p-8 box"
+>
     <div class="flex gap-4">
         <div class="relative">
             <img

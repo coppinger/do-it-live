@@ -18,12 +18,18 @@ export default {
                 hover: "0px -3px 10.3px 0px #138d3f inset, 0px 2px 2px 0px #8affb4 inset, 0px 0px 100px 0px rgba(140, 218, 173, 0.46)",
             },
             animation: {
-                "infinite-scroll": "infinite-scroll 5s linear infinite",
+                "infinite-scroll": "infinite-scroll 25s linear infinite",
+                "infinite-scroll-reverse":
+                    "infinite-scroll-reverse 25s linear infinite",
             },
             keyframes: {
                 "infinite-scroll": {
                     from: { transform: "translateX(0)" },
                     to: { transform: "translateX(-100%)" },
+                },
+                "infinite-scroll-reverse": {
+                    from: { transform: "translateX(-100%)" },
+                    to: { transform: "translateX(0)" },
                 },
             },
         },
