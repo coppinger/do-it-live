@@ -2,6 +2,11 @@
     // Components
     import Header from "../lib/components/Header.svelte";
     import StreamerBadge from "../lib/components/StreamerBadge.svelte";
+    import ChatReference from "../lib/components/ChatReference.svelte";
+    import Logo from "../lib/components/Logo.svelte";
+    import ChatMessage from "../lib/components/ChatMessage.svelte";
+    import Notification from "../lib/components/Notification.svelte";
+    import EmojiHolder from "../lib/components/EmojiHolder.svelte";
 
     // Libraries
 
@@ -18,29 +23,26 @@
     import Discord from "../lib/svgs/Discord.svelte";
     import Twitch from "../lib/svgs/Twitch.svelte";
     import Sleepy from "../lib/svgs/Sleepy.svelte";
-    import Heart from "../lib/svgs/Heart.svelte";
     import Confetti from "../lib/svgs/Confetti.svelte";
     import DiscountedPrice from "../lib/svgs/DiscountedPrice.svelte";
     import TimelineSeperator from "../lib/svgs/TimelineSeperator.svelte";
 
     // Discount checker
+    import { onMount } from "svelte";
 
     let discountCheck;
+    let discountRef = "";
 
-    import { onMount } from "svelte";
-    import ChatReference from "../lib/components/ChatReference.svelte";
-    import Logo from "../lib/components/Logo.svelte";
-    import ChatMessage from "../lib/components/ChatMessage.svelte";
-    import Notification from "../lib/components/Notification.svelte";
-
-    const discounts = {};
-
-    onMount(
-        () =>
-            (discountCheck =
-                window.location.search.includes("mdallbets") ||
-                window.location.search.includes("testing"))
-    );
+    onMount(() => {
+        if (window.location.search.includes("smallbets")) {
+            console.log("Test");
+            discountCheck = true;
+            discountRef = "Small Bets";
+        } else if (window.location.search.includes("producthunt")) {
+            discountCheck = true;
+            discountRef = "Product Hunt";
+        }
+    });
 
     // Intiate Atropos
 
@@ -74,17 +76,19 @@
     // Render chat messages
 
     let chatMessagesList = [
-        { username: "badcop", message: "ur a bad stremer" },
         {
-            username: "badcop",
+            username: "akirathedev",
+            message:
+                "This looks awesome, how long have you been working on it?",
+        },
+        {
+            username: "pgorley",
             message: "Make sure you don't forget to update the permissions!",
         },
-        { username: "badcop", message: "IT'S TIME TO SHIP, LFG!" },
-    ];
-
-    let chatMessagesLive = [
         { username: "badcop", message: "Hey, have you tried this library?" },
     ];
+
+    let chatMessagesLive = [];
 
     let chatMessageCounter = 0;
 
@@ -106,9 +110,15 @@
 
     // Render activity notifications
 
-    let activityMessagesList = [{ username: "badcop", type: "follow" }];
+    let activityMessagesList = [
+        { username: "threecreepio", type: "follow" },
+        { username: "mannimoki", type: "raid" },
+        { username: "trshpuppy", type: "shoutout" },
+        { username: "dnbull", type: "subscribe" },
+        { username: "probablyembed", type: "follow" },
+    ];
 
-    let activityMessagesLive = [{ username: "badcop", type: "subscribe" }];
+    let activityMessagesLive = [];
 
     let activityMessageCounter = 0;
 
@@ -127,6 +137,15 @@
     let activityMessageInterval = setInterval(addactivityMessage, 3500);
 
     activityMessageInterval;
+
+    // Stop the spaces
+
+    let streamTitles = [
+        "Hooking up Supabase to the MVP",
+        "Fixing the Deathstar",
+        "Launching my 100th SaaS",
+        "Retiring to Greece with a yacht",
+    ];
 </script>
 
 <div class="flex flex-col gap-12 md:gap-20">
@@ -180,13 +199,15 @@
         <div
             class="atropos-parent-el flex gap-8 max-w-screen-xl mx-auto my-16 px-6"
         >
-            <div class="hidden md:block max-w-xs shrink-0 w-full">
+            <div
+                class="atropos atropos-chat hidden md:block max-w-xs shrink-0 w-full"
+            >
                 <!-- scale container (required) -->
                 <div class="atropos-scale">
                     <!-- rotate container (required) -->
                     <div class="atropos-rotate">
                         <!-- inner container (required) -->
-                        <div class="atropos-inner" data-atropos-offset="-10">
+                        <div class="atropos-inner" data-atropos-offset="0">
                             <!-- put your custom content here -->
                             <div
                                 class="border-2 border-dashed border-[#2D4C7E] rounded-lg h-full"
@@ -244,23 +265,12 @@
                                         class="flex flex-col gap-2"
                                         data-atropos-offset="10"
                                     >
-                                        <div class="flex">
-                                            <p class="text-xl font-bold">​</p>
+                                        <div class="flex text-xl font-bold">
+                                            <p>​</p>
                                             <Typewriter mode="loop">
-                                                <p class="text-xl font-bold">
-                                                    Hooking up Supabase to the
-                                                    MVP
-                                                </p>
-                                                <p class="text-xl font-bold">
-                                                    Fixing the Deathstar
-                                                </p>
-                                                <p class="text-xl font-bold">
-                                                    Launching my 100th SaaS
-                                                </p>
-                                                <p class="text-xl font-bold">
-                                                    Retiring to Greece with a
-                                                    yacht
-                                                </p>
+                                                {#each streamTitles as streamTitle}
+                                                    <p>{streamTitle}</p>
+                                                {/each}
                                             </Typewriter>
                                         </div>
                                         <p
@@ -303,13 +313,15 @@
                     </div>
                 </div>
             </div>
-            <div class="hidden md:block max-w-xs shrink-0 w-full">
+            <div
+                class="atropos atropos-activity hidden md:block max-w-xs shrink-0 w-full"
+            >
                 <!-- scale container (required) -->
                 <div class="atropos-scale">
                     <!-- rotate container (required) -->
                     <div class="atropos-rotate">
                         <!-- inner container (required) -->
-                        <div class="atropos-inner" data-atropos-offset="-10">
+                        <div class="atropos-inner" data-atropos-offset="0">
                             <!-- put your custom content here -->
                             <div
                                 class="border-2 border-dashed border-[#2D4C7E] rounded-lg h-full"
@@ -349,7 +361,7 @@
         <div
             class="flex flex-col md:flex-row justify-center bg-transparent md:bg-transparent-blue md:w-fit items-center gap-4 p-4 rounded-2xl self-center"
         >
-            <Sleepy />
+            <EmojiHolder>😴</EmojiHolder>
             <p class="text-slate-200 text-2xl font-medium">
                 I worked on my projects inconsistently
             </p>
@@ -357,15 +369,15 @@
         <div
             class="flex flex-col md:flex-row justify-center bg-transparent md:bg-transparent-blue md:w-fit items-center gap-4 p-4 rounded-2xl self-center"
         >
-            <Sleepy />
+            <EmojiHolder>🎭</EmojiHolder>
             <p class="text-slate-200 text-2xl font-medium">
-                I was held back by my crippling perfectionimd
+                I was held back by my crippling perfectionism
             </p>
         </div>
         <div
             class="flex flex-col md:flex-row justify-center bg-transparent md:bg-transparent-blue md:w-fit items-center gap-4 p-4 rounded-2xl self-center"
         >
-            <Sleepy />
+            <EmojiHolder>⚓</EmojiHolder>
             <p class="text-slate-200 text-2xl font-medium">
                 I struggled to finish my projects, and never shipped them
             </p>
@@ -389,25 +401,30 @@
         <div
             class="flex flex-col md:flex-row justify-center bg-transparent md:bg-transparent-blue md:w-fit items-center gap-4 p-4 rounded-2xl self-center"
         >
-            <Sleepy />
+            <EmojiHolder>🚀</EmojiHolder>
+
             <p class="text-slate-200 text-2xl font-medium">
-                I worked on my projects inconsistently
+                My ability to stay focused and work consistently skyrocketed
             </p>
         </div>
         <div
             class="flex flex-col md:flex-row justify-center bg-transparent md:bg-transparent-blue md:w-fit items-center gap-4 p-4 rounded-2xl self-center"
         >
-            <Sleepy />
+            <EmojiHolder>🤝</EmojiHolder>
+
             <p class="text-slate-200 text-2xl font-medium">
-                I was held back by my crippling perfectionimd
+                I connected with & received support from countless brilliant
+                folks
             </p>
         </div>
         <div
             class="flex flex-col md:flex-row justify-center bg-transparent md:bg-transparent-blue md:w-fit items-center gap-4 p-4 rounded-2xl self-center"
         >
-            <Sleepy />
+            <EmojiHolder>🌱</EmojiHolder>
+
             <p class="text-slate-200 text-2xl font-medium">
-                I struggled to finish my projects, and never shipped them
+                I built a community of peers and friends in which we all grew
+                together
             </p>
         </div>
         <!-- 2023 Photo -->
@@ -418,7 +435,7 @@
                 active and highly supportive community
             </div>
             <div class="mt-4 overflow-hidden rounded-3xl max-w-md">
-                <img src="/images/green-screen.jpg" alt="" />
+                <img src="/images/current-setup.jpg" alt="" />
             </div>
         </div>
     </div>
@@ -431,16 +448,18 @@
         </p>
         {#if discountCheck}
             <div
-                class="border-2 border-red-500 p-8 rounded-xl flex flex-col items-center gap-4"
+                class="border-2 border-pink-500 px-8 py-4 rounded-xl flex flex-col items-center gap-4 w-fit self-center md:flex-row"
             >
-                <Heart />
-                <p class="text-xl font-bold">
-                    It looks like you came here from mdall Bets 👀
-                </p>
-                <p class="text-lg font-medium text-slate-300">
-                    I’d love to have you on this course—take another 20% off
-                    ($60)
-                </p>
+                <p class="text-4xl">💓</p>
+                <div class="flex flex-col md:items-start">
+                    <p class="text-xl font-bold">
+                        It looks like you've come here from {discountRef} 👀
+                    </p>
+                    <p class="text-lg font-medium text-slate-300">
+                        I’d love to have you on this course—take another 20% off
+                        ($60)
+                    </p>
+                </div>
             </div>
         {/if}
         <div class="flex flex-col gap-8 items-center justify-center">
@@ -2446,9 +2465,16 @@
                     >You are the worst streamer I have ever come across, fr man</ChatReference
                 ><ChatReference username="badcop" followAge="2 years"
                     >You are the worst streamer I have ever come across, fr man</ChatReference
-                ><ChatReference username="badcop" followAge="2 years"
-                    >You are the worst streamer I have ever come across, fr man</ChatReference
-                ><ChatReference username="badcop" followAge="2 years"
+                >
+                <li
+                    class="flex flex-col gap-4 shrink-0 bg-transparent-blue rounded-2xl overflow-hidden"
+                >
+                    <img
+                        src="/images/theo-block.jpg"
+                        alt="A screenshot of the Twitter user @t3gg's profile, indicating they've blocked the viewier (me)."
+                    />
+                </li>
+                <ChatReference username="badcop" followAge="2 years"
                     >You are the worst streamer I have ever come across, fr man</ChatReference
                 >
             </ul>
@@ -2469,9 +2495,16 @@
                     >You are the worst streamer I have ever come across, fr man</ChatReference
                 ><ChatReference username="badcop" followAge="2 years"
                     >You are the worst streamer I have ever come across, fr man</ChatReference
-                ><ChatReference username="badcop" followAge="2 years"
-                    >You are the worst streamer I have ever come across, fr man</ChatReference
-                ><ChatReference username="badcop" followAge="2 years"
+                >
+                <li
+                    class="flex flex-col gap-4 shrink-0 bg-transparent-blue rounded-2xl overflow-hidden"
+                >
+                    <img
+                        src="/images/theo-block.jpg"
+                        alt="A screenshot of the Twitter user @t3gg's profile, indicating they've blocked the viewier (me)."
+                    />
+                </li>
+                <ChatReference username="badcop" followAge="2 years"
                     >You are the worst streamer I have ever come across, fr man</ChatReference
                 >
             </ul>
@@ -2496,6 +2529,7 @@
             <li
                 class="flex flex-col bg-transparent-blue p-6 rounded-2xl gap-4 md:p-12"
             >
+                <div class=""><p class="text-4xl">📸</p></div>
                 <p class="text-3xl font-bold">
                     What if I’m not good on camera?
                 </p>
@@ -2507,6 +2541,7 @@
             <li
                 class="flex flex-col bg-transparent-blue p-6 rounded-2xl gap-4 md:p-12"
             >
+                <div class=""><p class="text-4xl">🎥</p></div>
                 <p class="text-3xl font-bold">
                     What if I don’t have the budget for all the equipment I
                     need?
@@ -2515,12 +2550,14 @@
                     You don’t need fancy equipment to get started—for reference,
                     all I had was an ancient MacBook Pro and a green scarf.
                     What’s more, a list of equipment recommendations for
-                    different budgets is included as a resource.
+                    different budgets is included in the course, as well as a
+                    resource.
                 </p>
             </li>
             <li
                 class="flex flex-col bg-transparent-blue p-6 rounded-2xl gap-4 md:p-12"
             >
+                <div class=""><p class="text-4xl">⌛</p></div>
                 <p class="text-3xl font-bold">
                     What if I can’t stream all the time?
                 </p>
@@ -2532,6 +2569,7 @@
             <li
                 class="flex flex-col bg-transparent-blue p-6 rounded-2xl gap-4 md:p-12"
             >
+                <div class=""><p class="text-4xl">🧾</p></div>
                 <p class="text-3xl font-bold">
                     What if it’s not for me, and I want a refund?
                 </p>

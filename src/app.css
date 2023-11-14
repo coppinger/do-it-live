@@ -74,6 +74,7 @@
 
 .typing::after {
     background-color: white !important;
+    width: 2px !important;
 }
 
 @layer utilities {

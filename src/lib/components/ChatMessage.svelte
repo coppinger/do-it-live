@@ -17,8 +17,8 @@
     }}
 >
     <div class="flex gap-2 items-center">
-        <div class="h-8 w-8">
-            <img src={`/images/${username}.png`} alt="" />
+        <div class="h-8 w-8 rounded-full overflow-hidden">
+            <img src={`/images/${username}.jpg`} alt="" />
         </div>
         <div class="flex">
             <p class="font-bold">{username}</p>
