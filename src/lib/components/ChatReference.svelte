@@ -6,10 +6,14 @@
 <li
     class="flex flex-col gap-4 shrink-0 bg-transparent-blue rounded-2xl p-8 box"
 >
-    <div class="flex gap-4">
-        <div class="relative">
+    <div class="flex gap-4 p-4">
+        <!-- Helper for grabbing pfps -->
+        <!-- <a href={`https://twitch.tv/${username}`} target="_blank"
+            >profile link</a
+        > -->
+        <div class="relative overflow-hidden rounded-full">
             <img
-                src={`/images/${username}.png`}
+                src={`/images/${username.toLowerCase()}.png`}
                 alt={`${username}'s profile picture'`}
             />
         </div>
