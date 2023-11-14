@@ -20,15 +20,15 @@
     <p class="order-2 font-bold">{username}</p>
     {#if type === "follow"}
         <p class="order-1">💖</p>
-        <p class="order-3">followed you</p>
+        <p class="order-3 font-medium">followed you</p>
     {:else if type === "subscribe"}
         <p class="order-1">🌟</p>
-        <p class="order-3">subscribed</p>
+        <p class="order-3 font-medium">subscribed</p>
     {:else if type === "raid"}
         <p class="order-1">⚔️</p>
-        <p class="order-3">gave you a shoutout</p>
+        <p class="order-3 font-medium">gave you a shoutout</p>
     {:else if type === "shoutout"}
         <p class="order-1">📢</p>
-        <p class="order-3">raided you with 1,337 ppl</p>
+        <p class="order-3 font-medium">raided you with 1,337 ppl</p>
     {/if}
 </div>

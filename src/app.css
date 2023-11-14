@@ -75,3 +75,9 @@
 .typing::after {
     background-color: white !important;
 }
+
+@layer utilities {
+    .pause {
+        animation-play-state: paused;
+    }
+}
