@@ -18,9 +18,9 @@ export default {
                 hover: "0px -3px 10.3px 0px #138d3f inset, 0px 2px 2px 0px #8affb4 inset, 0px 0px 100px 0px rgba(140, 218, 173, 0.46)",
             },
             animation: {
-                "infinite-scroll": "infinite-scroll 30s linear infinite",
+                "infinite-scroll": "infinite-scroll 60s linear infinite",
                 "infinite-scroll-reverse":
-                    "infinite-scroll-reverse 30s linear infinite",
+                    "infinite-scroll-reverse 60s linear infinite",
             },
             keyframes: {
                 "infinite-scroll": {

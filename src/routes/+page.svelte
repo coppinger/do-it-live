@@ -177,8 +177,10 @@
             alt=""
             class="absolute -top-56 pointer-events-none"
         />
-        <div class="atropos-parent-el flex gap-8 max-w-screen-xl mx-auto my-16">
-            <div class="max-w-xs shrink-0 w-full">
+        <div
+            class="atropos-parent-el flex gap-8 max-w-screen-xl mx-auto my-16 px-6"
+        >
+            <div class="hidden md:block max-w-xs shrink-0 w-full">
                 <!-- scale container (required) -->
                 <div class="atropos-scale">
                     <!-- rotate container (required) -->
@@ -301,7 +303,7 @@
                     </div>
                 </div>
             </div>
-            <div class="max-w-xs shrink-0 w-full">
+            <div class="hidden md:block max-w-xs shrink-0 w-full">
                 <!-- scale container (required) -->
                 <div class="atropos-scale">
                     <!-- rotate container (required) -->
@@ -2371,11 +2373,11 @@
         <div class="flex flex-col text-center gap-8 mb-8">
             <p class="heading">What do I mean by community?</p>
             <p class="sub-heading max-w-md self-center">
-                I asked my chat, and here are some of the responses
+                I asked my chat, and here are some of their responses
             </p>
         </div>
         <div
-            class="w-full flex overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
+            class="w-full flex overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_24px,_black_calc(100%-24px),transparent_100%)] md:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
         >
             <ul
                 class="flex shrink-0 items-center justify-center md:justify-start gap-8 animate-infinite-scroll pl-8"
@@ -2425,7 +2427,7 @@
             </ul>
         </div>
         <div
-            class="w-full flex overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
+            class="w-full flex overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_24px,_black_calc(100%-24px),transparent_100%)] md:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
         >
             <ul
                 class="flex shrink-0 items-center justify-center md:justify-start gap-8 animate-infinite-scroll-reverse pl-8"
