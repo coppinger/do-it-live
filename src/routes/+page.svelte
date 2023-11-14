@@ -35,7 +35,6 @@
 
     onMount(() => {
         if (window.location.search.includes("smallbets")) {
-            console.log("Test");
             discountCheck = true;
             discountRef = "Small Bets";
         } else if (window.location.search.includes("producthunt")) {
@@ -97,7 +96,7 @@
             ...chatMessagesLive,
             chatMessagesList[chatMessageCounter],
         ];
-        if (chatMessagesLive.length <= chatMessagesList.length) {
+        if (chatMessagesLive.length < chatMessagesList.length) {
             chatMessageCounter++;
         } else {
             clearInterval(chatMessageInterval);
@@ -105,8 +104,6 @@
     }
 
     let chatMessageInterval = setInterval(addChatMessage, 2500);
-
-    chatMessageInterval;
 
     // Render activity notifications
 
@@ -122,21 +119,19 @@
 
     let activityMessageCounter = 0;
 
-    function addactivityMessage() {
+    function addActivityMessage() {
         activityMessagesLive = [
             ...activityMessagesLive,
             activityMessagesList[activityMessageCounter],
         ];
-        if (activityMessagesLive.length <= activityMessagesList.length) {
+        if (activityMessagesLive.length < activityMessagesList.length) {
             activityMessageCounter++;
         } else {
             clearInterval(activityMessageInterval);
         }
     }
 
-    let activityMessageInterval = setInterval(addactivityMessage, 3500);
-
-    activityMessageInterval;
+    let activityMessageInterval = setInterval(addActivityMessage, 3500);
 
     // Stop the spaces
 
@@ -200,7 +195,7 @@
             class="atropos-parent-el flex gap-8 max-w-screen-xl mx-auto my-16 px-6"
         >
             <div
-                class="atropos atropos-chat hidden md:block max-w-xs shrink-0 w-full"
+                class="atropos atropos-chat !hidden !hidden xl:!block max-w-xs shrink-0 w-full h-[440px] w-[320px]"
             >
                 <!-- scale container (required) -->
                 <div class="atropos-scale">
@@ -212,10 +207,16 @@
                             <div
                                 class="border-2 border-dashed border-[#2D4C7E] rounded-lg h-full"
                             >
-                                <div class="flex gap-4 px-8 pt-8">
+                                <div
+                                    class="flex gap-4 px-8 pt-8"
+                                    data-atropos-offset="5"
+                                >
                                     <p class="text-xl font-bold">💬 Chat</p>
                                 </div>
-                                <div class="flex flex-col px-8 pt-8 gap-8">
+                                <div
+                                    class="flex flex-col px-8 pt-8 gap-8"
+                                    data-atropos-offset="10"
+                                >
                                     {#each chatMessagesLive as { username, message }}
                                         <ChatMessage {username}>
                                             {message}
@@ -243,7 +244,7 @@
                                         src="/images/hacker.jpg"
                                         class="rounded-xl"
                                         alt=""
-                                        data-atropos-offset="-10"
+                                        data-atropos-offset="10"
                                     />
                                 </div>
                             </div>
@@ -314,7 +315,7 @@
                 </div>
             </div>
             <div
-                class="atropos atropos-activity hidden md:block max-w-xs shrink-0 w-full"
+                class="atropos atropos-activity !hidden xl:!block max-w-xs shrink-0 w-full h-[440px] w-[320px]"
             >
                 <!-- scale container (required) -->
                 <div class="atropos-scale">
@@ -326,13 +327,20 @@
                             <div
                                 class="border-2 border-dashed border-[#2D4C7E] rounded-lg h-full"
                             >
-                                <div class="flex gap-4 px-8 pt-8">
-                                    <p class="text-xl font-bold">🔔 Activity</p>
-                                </div>
-                                <div class="flex flex-col px-8 pt-8 gap-8">
-                                    {#each activityMessagesLive as { username, type }}
-                                        <Notification {type} {username} />
-                                    {/each}
+                                <div data-atropos-offset="10">
+                                    <div
+                                        class="flex gap-4 px-8 pt-8"
+                                        data-atropos-offset="5"
+                                    >
+                                        <p class="text-xl font-bold">
+                                            🔔 Activity
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-col px-8 pt-8 gap-8">
+                                        {#each activityMessagesLive as { username, type }}
+                                            <Notification {type} {username} />
+                                        {/each}
+                                    </div>
                                 </div>
                             </div>
                         </div>
