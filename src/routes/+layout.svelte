@@ -26,7 +26,7 @@
         property="og:description"
         content="A cohort based course that quickly teaches you everything you need to know to build & grow a Twitch stream as an indie hacker"
     />
-    <meta property="og:image" content="/images/meta-tags.png" />
+    <meta property="og:image" content="/images/metaimage.jpg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -39,7 +39,7 @@
         property="twitter:description"
         content="A cohort based course that quickly teaches you everything you need to know to build & grow a Twitch stream as an indie hacker"
     />
-    <meta property="twitter:image" content="/images/meta-tags.png" />
+    <meta property="twitter:image" content="/images/metaimage.jpg" />
 </svelte:head>
 
 <PlausibleAnalytics />
