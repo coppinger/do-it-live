@@ -7,7 +7,8 @@
     import ChatMessage from "../lib/components/ChatMessage.svelte";
     import Notification from "../lib/components/Notification.svelte";
     import EmojiHolder from "../lib/components/EmojiHolder.svelte";
-    import SocialBackup from "../lib/components/SocialBackup.svelte";
+    import StreamerReferences from "../lib/components/StreamerReferences.svelte";
+    import ChatReferences from "../lib/components/ChatReferences.svelte";
 
     // Libraries
 
@@ -41,6 +42,9 @@
         } else if (window.location.search.includes("producthunt")) {
             discountCheck = true;
             discountRef = "Product Hunt";
+        } else if (window.location.search.includes("twitter")) {
+            discountCheck = true;
+            discountRef = "my Twitter";
         }
     });
 
@@ -160,7 +164,12 @@
                 know to build & grow a Twitch stream as an indie hacker
             </p>
         </div>
-        <a href="/" class="primary-button flex gap-2 items-center"
+        <a
+            href={!discountCheck
+                ? "https://thecoppinger.gumroad.com/l/build-in-public-live"
+                : "https://thecoppinger.gumroad.com/l/build-in-public-live/friends-and-fam"}
+            target="_blank"
+            class="primary-button flex gap-2 items-center"
             >Sign me up <Confetti />
         </a>
         <ul class="flex flex-col gap-6 md:gap-16 md:flex-row">
@@ -492,29 +501,43 @@
                     <p class="text-green-300 font-glamour green-glow text-9xl">
                         100
                     </p>
-                    <svg
-                        class="absolute ml-8"
-                        width="143"
-                        height="51"
-                        viewBox="0 0 143 51"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M8.80643 43.7738C7.10991 44.8112 2.81353 46.6004 2.02819 48.7498C1.35553 50.5907 12.9444 46.9591 12.9792 46.9475C41.0986 37.5365 68.4781 25.9145 96.4536 16.0731C109.167 11.6008 122.052 7.61281 134.89 3.51571C135.909 3.19034 138.966 1.78079 140.218 2.43823C142.311 3.53659 136.417 8.81396 136.104 9.21648"
-                            stroke="#EA4445"
-                            stroke-width="3"
-                            stroke-linecap="round"
-                        />
-                    </svg>
+                    {#if discountCheck}
+                        <svg
+                            class="absolute ml-8"
+                            width="143"
+                            height="51"
+                            viewBox="0 0 143 51"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M8.80643 43.7738C7.10991 44.8112 2.81353 46.6004 2.02819 48.7498C1.35553 50.5907 12.9444 46.9591 12.9792 46.9475C41.0986 37.5365 68.4781 25.9145 96.4536 16.0731C109.167 11.6008 122.052 7.61281 134.89 3.51571C135.909 3.19034 138.966 1.78079 140.218 2.43823C142.311 3.53659 136.417 8.81396 136.104 9.21648"
+                                stroke="#EA4445"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                            />
+                        </svg>
+                    {/if}
                 </div>
-                <DiscountedPrice />
+                {#if discountCheck}
+                    <div>
+                        <DiscountedPrice />
+                    </div>
+                {/if}
             </div>
             <p class="sub-heading max-w-md self-center">50% launch discount</p>
-            <p class="sub-heading flex gap-2 items-center">
-                +20% extra off <span>💖</span>
-            </p>
-            <a href="/" class="primary-button flex gap-2 items-center"
+            {#if discountCheck}
+                <p class="sub-heading flex gap-2 items-center">
+                    +20% extra off <span>💖</span>
+                </p>
+            {/if}
+
+            <a
+                href={!discountCheck
+                    ? "https://thecoppinger.gumroad.com/l/build-in-public-live"
+                    : "https://thecoppinger.gumroad.com/l/build-in-public-live/friends-and-fam"}
+                target="_blank"
+                class="primary-button flex gap-2 items-center"
                 >Sign me up <Confetti />
             </a>
         </div>
@@ -2333,7 +2356,7 @@
             </li>
         </ul>
     </section>
-    <SocialBackup />
+    <StreamerReferences />
     <!-- FAQ Section -->
     <section
         class="flex flex-col gap-8 px-6 md:grid md:grid-cols-2 max-w-sm md:max-w-screen-xl mx-auto"
@@ -2415,7 +2438,12 @@
             In the immortal words of Bill O’Reilly
         </p>
         <p class="heading">Do it live</p>
-        <a href="/" class="primary-button flex gap-2 items-center"
+        <a
+            href={!discountCheck
+                ? "https://thecoppinger.gumroad.com/l/build-in-public-live"
+                : "https://thecoppinger.gumroad.com/l/build-in-public-live/friends-and-fam"}
+            target="_blank"
+            class="primary-button flex gap-2 items-center"
             >Sign me up <Confetti />
         </a>
     </section>
@@ -2430,8 +2458,10 @@
             </div>
         </div>
         <div class="flex gap-4">
-            <Twitter />
-            <Discord />
+            <a href="https://twitter.com/TheCoppinger" target="_blank">
+                <Twitter /></a
+            >
+            <!-- <Discord /> -->
         </div>
     </footer>
 </div>

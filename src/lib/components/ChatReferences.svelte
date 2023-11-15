@@ -1,83 +1,7 @@
 <script>
-    import Twitch from "../svgs/Twitch.svelte";
     import ChatReference from "./ChatReference.svelte";
 </script>
 
-<!-- Streamer References Section -->
-<section class="px-6 flex flex-col gap-16 items-center">
-    <div class="flex flex-col text-center gap-8">
-        <p class="heading">What’s the word on the street?</p>
-        <p class="sub-heading max-w-md self-center">
-            Here’s what a few Software & Game Dev streamers on Twitch have to
-            say
-        </p>
-    </div>
-    <div class="flex flex-col gap-16 max-w-sm md:max-w-screen-xl md:flex-row">
-        <!-- 1 -->
-        <div class="flex flex-col gap-4 items-center md:items-start w-full">
-            <div class="flex gap-4">
-                <div class="relative">
-                    <img src="/images/badcop.png" alt="" class="rounded-full" />
-                    <Twitch class="absolute -bottom-1 -right-1" />
-                </div>
-                <div class="flex flex-col z-10">
-                    <p class="text-lg font-bold">TheCoppinger</p>
-                    <p class="text-lg font-medium text-slate-300">
-                        1.9K followers
-                    </p>
-                </div>
-            </div>
-            <p class="text-xl font-medium text-center md:text-start">
-                Charlie is objectively one of the worst streamers I’ve ever come
-                across
-            </p>
-        </div>
-        <!-- 2 -->
-        <div class="flex flex-col gap-4 items-center md:items-start w-full">
-            <div class="flex gap-4">
-                <div class="relative">
-                    <img src="/images/badcop.png" alt="" class="rounded-full" />
-                    <Twitch class="absolute -bottom-1 -right-1" />
-                </div>
-                <div class="flex flex-col z-10">
-                    <p class="text-lg font-bold">TG_Khalil</p>
-                    <p class="text-lg font-medium text-slate-300">
-                        979 followers
-                    </p>
-                </div>
-            </div>
-            <p class="text-xl font-medium text-center md:text-start">
-                ⚡ A powerhouse of creativity, empathy & grit, super patient and
-                always infotaining. Truly, a legend is what you are! ✨ Aside
-                from that, completely bonkers too. Hard to not love!!
-            </p>
-        </div>
-        <!-- 3 -->
-        <div class="flex flex-col gap-4 items-center md:items-start w-full">
-            <div class="flex gap-4">
-                <div class="relative">
-                    <img
-                        src="/images/codefork.png"
-                        alt=""
-                        class="rounded-full"
-                    />
-                    <Twitch class="absolute -bottom-1 -right-1" />
-                </div>
-                <div class="flex flex-col z-10">
-                    <p class="text-lg font-bold">Codefork</p>
-                    <p class="text-lg font-medium text-slate-300">
-                        159 followers
-                    </p>
-                </div>
-            </div>
-            <p class="text-xl font-medium text-center md:text-start">
-                Charlie is a great mentor and friend and will accelerate your
-                growth as a streamer and get you started with building a
-                community you can call home.
-            </p>
-        </div>
-    </div>
-</section>
 <section class="px-6 flex flex-col gap-8 items-center">
     <div class="flex flex-col text-center gap-8 mb-8">
         <p class="heading">What do I mean by community?</p>
@@ -206,7 +130,7 @@
                 username="spagrettigorl69"
                 followAge="2 years">So handsome!</ChatReference
             ><ChatReference username="badcop" followAge="2 years"
-                >You are the worst streamer I have ever come across, fr man</ChatReference
+                >You are the worst streamer I have ever come across, fr man test</ChatReference
             ><ChatReference username="badcop" followAge="2 years"
                 >You are the worst streamer I have ever come across, fr man</ChatReference
             ><ChatReference username="badcop" followAge="2 years"
