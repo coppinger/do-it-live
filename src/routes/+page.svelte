@@ -192,9 +192,7 @@
             alt=""
             class="absolute -top-56 pointer-events-none"
         />
-        <div
-            class="atropos-parent-el flex gap-8 max-w-screen-xl mx-auto my-16 px-6"
-        >
+        <div class="atropos-parent-el flex gap-8 max-w-screen-xl mx-auto px-6">
             <div
                 class="atropos atropos-chat !hidden !hidden xl:!block max-w-xs shrink-0 w-full h-[440px] w-[320px]"
             >
@@ -214,6 +212,10 @@
                                 >
                                     <p class="text-xl font-bold">💬 Chat</p>
                                 </div>
+                                <ChatMessage invisible username="invisible"
+                                    >lol hopefully u never see this on the page,
+                                    if you do, i hath failed {":^)"}</ChatMessage
+                                >
                                 <div
                                     class="flex flex-col px-8 pt-8 gap-8"
                                     data-atropos-offset="10"
@@ -337,6 +339,11 @@
                                             🔔 Activity
                                         </p>
                                     </div>
+                                    <Notification
+                                        invisible
+                                        type="follower"
+                                        username="invisible"
+                                    />
                                     <div class="flex flex-col px-8 pt-8 gap-8">
                                         {#each activityMessagesLive as { username, type }}
                                             <Notification {type} {username} />

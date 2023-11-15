@@ -3,26 +3,32 @@
     import { quintOut } from "svelte/easing";
 
     export let username;
+    export let invisible = false;
 </script>
 
 <div
-    class="flex flex-col gap-2"
-    transition:fly={{
-        delay: 100,
-        duration: 500,
-        x: -200,
-        y: 0,
-        opacity: 0.5,
-        easing: quintOut,
-    }}
+    class={invisible ? "max-h-[0px] overflow-hidden" : ""}
+    aria-hidden={invisible}
 >
-    <div class="flex gap-2 items-center">
-        <div class="h-8 w-8 rounded-full overflow-hidden">
-            <img src={`/images/${username}.jpg`} alt="" />
+    <div
+        class="flex flex-col gap-2"
+        transition:fly={{
+            delay: 100,
+            duration: 500,
+            x: -200,
+            y: 0,
+            opacity: 0.5,
+            easing: quintOut,
+        }}
+    >
+        <div class="flex gap-2 items-center">
+            <div class="h-8 w-8 rounded-full overflow-hidden">
+                <img src={`/images/${username}.jpg`} alt="" />
+            </div>
+            <div class="flex">
+                <p class="font-bold">{username}</p>
+            </div>
         </div>
-        <div class="flex">
-            <p class="font-bold">{username}</p>
-        </div>
+        <p class="font-medium"><slot /></p>
     </div>
-    <p class="font-medium"><slot /></p>
 </div>
