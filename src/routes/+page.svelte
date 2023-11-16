@@ -2314,8 +2314,8 @@
                 </p>
                 <p class="text-3xl font-bold">Streaming 101</p>
                 <p class="text-xl font-medium text-slate-400">
-                    There is a range of software available to stream from, and
-                    most <have />
+                    I’ll guide you through the basics of setting up your stream
+                    and engaging with your audience in real-time.
                 </p>
             </li>
             <li
@@ -2326,8 +2326,9 @@
                 </p>
                 <p class="text-3xl font-bold">Software</p>
                 <p class="text-xl font-medium text-slate-400">
-                    There is a range of software available to stream from, and
-                    most <have />
+                    You’ll learn how to quickly setup and navigate the tools to
+                    enhance your stream’s quality and view interaction, form OBS
+                    Studio to chat integrations.
                 </p>
             </li>
             <li
@@ -2338,8 +2339,10 @@
                 </p>
                 <p class="text-3xl font-bold">Equipment</p>
                 <p class="text-xl font-medium text-slate-400">
-                    There is a range of software available to stream from, and
-                    most <have />
+                    The right equipment can transform your stream. Discover
+                    budget-friendly and high-end options for cameras,
+                    microphones, and lighting that will make your stream
+                    professional and appealing.
                 </p>
             </li>
             <li
@@ -2350,8 +2353,10 @@
                 </p>
                 <p class="text-3xl font-bold">Growth</p>
                 <p class="text-xl font-medium text-slate-400">
-                    There is a range of software available to stream from, and
-                    most <have />
+                    I’ll share the strategies for leveraging your stream for
+                    maximum exposure, community building and product marketing.
+                    Learn how to grow your stream, your audience and your
+                    community.
                 </p>
             </li>
         </ul>
