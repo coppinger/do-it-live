@@ -161,7 +161,8 @@
             <p class="heading !text-7xl">Build in public on Twitch</p>
             <p class="text-slate-400 text-xl font-medium max-w-md">
                 A cohort based course that teaches you everything you need to
-                know to build & grow a Twitch stream as an indie hacker
+                know in order to build & grow a Twitch stream as a developer or
+                indie hacker
             </p>
         </div>
         <a
