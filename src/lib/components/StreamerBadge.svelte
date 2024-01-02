@@ -78,7 +78,7 @@
             </svg>
             <div class="flex flex-col z-10">
                 <p class="text-lg font-bold">TheCoppinger</p>
-                <p class="text-lg font-medium text-slate-300">1.9K followers</p>
+                <p class="text-lg font-medium text-slate-300">2.4K followers</p>
             </div>
         </div>
         <div class="absolute grid place-items-center inset-center">

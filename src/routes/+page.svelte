@@ -161,8 +161,8 @@
             <p class="heading !text-7xl">Build in public on Twitch</p>
             <p class="text-slate-400 text-xl font-medium max-w-md">
                 A cohort based course that teaches you everything you need to
-                know in order to build & grow a Twitch stream as a developer or
-                indie hacker
+                know in order to build & grow a Twitch stream as a developer,
+                founder or indie hacker
             </p>
         </div>
         <a
@@ -651,19 +651,19 @@
                     class="flex gap-3 items-center text-slate-100 text-xl font-medium"
                 >
                     <Tick />
-                    Two 1 hour video classes
+                    Pre-recorded fundamentals lessons
                 </li>
                 <li
                     class="flex gap-3 items-center text-slate-100 text-xl font-medium"
                 >
                     <Tick />
-                    Recordings available
+                    A 1.5 hour live video lesson
                 </li>
                 <li
                     class="flex gap-3 items-center text-slate-100 text-xl font-medium"
                 >
                     <Tick />
-                    One on one strategy call
+                    Two 30 minute one-on-one calls
                 </li>
             </ul>
         </div>
