@@ -165,14 +165,14 @@
                 founder or indie hacker
             </p>
         </div>
-        <a
+        <!-- <a
             href={!discountCheck
-                ? "https://thecoppinger.gumroad.com/l/build-in-public-live"
-                : "https://thecoppinger.gumroad.com/l/build-in-public-live/friends-and-fam"}
+                ? "https://buy.stripe.com/eVa4kb8tk0qSaWY28c"
+                : "https://buy.stripe.com/eVa4kb8tk0qSaWY28c?prefilled_promo_code=SMALLBETS"}
             target="_blank"
             class="primary-button flex gap-2 items-center"
             >Sign me up <Confetti />
-        </a>
+        </a> -->
         <ul class="flex flex-col gap-6 md:gap-16 md:flex-row">
             <li
                 class="flex gap-3 items-center text-slate-100 text-xl font-medium"
@@ -482,8 +482,7 @@
                         It looks like you've come here from {discountRef} 👀
                     </p>
                     <p class="text-lg font-medium text-slate-300">
-                        I’d love to have you on this course—take another 20% off
-                        ($60)
+                        I’d love to have you on this course—take $50 off!
                     </p>
                 </div>
             </div>
@@ -492,15 +491,15 @@
             <div
                 class="flex flex-col md:flex-row md:gap-8 justify-center items-center"
             >
-                <p class="font-glamour text-slate-300 text-7xl opacity-50">
+                <!-- <p class="font-glamour text-slate-300 text-7xl opacity-50">
                     $200
-                </p>
+                </p> -->
                 <div class="flex justify-center items-center relative">
                     <p class="text-green-300 font-glamour green-glow text-6xl">
                         $
                     </p>
                     <p class="text-green-300 font-glamour green-glow text-9xl">
-                        100
+                        149
                     </p>
                     {#if discountCheck}
                         <svg
@@ -526,17 +525,16 @@
                     </div>
                 {/if}
             </div>
-            <p class="sub-heading max-w-md self-center">50% launch discount</p>
+            <!-- <p class="sub-heading max-w-md self-center">50% launch discount</p> -->
             {#if discountCheck}
                 <p class="sub-heading flex gap-2 items-center">
-                    +20% extra off <span>💖</span>
+                    Take this: $50 off for the Small Bets fam <span>💖</span>
                 </p>
             {/if}
-
             <a
                 href={!discountCheck
-                    ? "https://thecoppinger.gumroad.com/l/build-in-public-live"
-                    : "https://thecoppinger.gumroad.com/l/build-in-public-live/friends-and-fam"}
+                    ? "https://buy.stripe.com/eVa4kb8tk0qSaWY28c"
+                    : "https://buy.stripe.com/eVa4kb8tk0qSaWY28c?prefilled_promo_code=SMALLBETS"}
                 target="_blank"
                 class="primary-button flex gap-2 items-center"
                 >Sign me up <Confetti />
@@ -2446,8 +2444,8 @@
         <p class="heading">Do it live</p>
         <a
             href={!discountCheck
-                ? "https://thecoppinger.gumroad.com/l/build-in-public-live"
-                : "https://thecoppinger.gumroad.com/l/build-in-public-live/friends-and-fam"}
+                ? "https://buy.stripe.com/eVa4kb8tk0qSaWY28c"
+                : "https://buy.stripe.com/eVa4kb8tk0qSaWY28c?prefilled_promo_code=SMALLBETS"}
             target="_blank"
             class="primary-button flex gap-2 items-center"
             >Sign me up <Confetti />
