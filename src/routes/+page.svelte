@@ -528,7 +528,7 @@
             <!-- <p class="sub-heading max-w-md self-center">50% launch discount</p> -->
             {#if discountCheck}
                 <p class="sub-heading flex gap-2 items-center">
-                    Take this: $50 off for the Small Bets fam <span>💖</span>
+                    Take this: $50 off <span>💖</span>
                 </p>
             {/if}
             <a
