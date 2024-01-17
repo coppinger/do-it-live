@@ -469,7 +469,7 @@
     <div class="flex flex-col justify-center gap-8 px-6 py-12 text-center">
         <p class="heading">Start your streaming journey</p>
         <p class="sub-heading max-w-md self-center">
-            I’ll teach you everything you need to know in order to kick of your
+            I’ll teach you everything you need to know in order to kick off your
             stream with a bang
         </p>
         {#if discountCheck}
